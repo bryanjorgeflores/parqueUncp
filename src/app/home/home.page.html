@@ -1,0 +1,33 @@
+<app-header></app-header>
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-text-center">
+      <ion-col size="12" class="ion-text-center">
+        <ion-card>
+          <img src="https://miro.medium.com/max/2625/0*JM8DmN3dQTHvVJzg.png" />
+          <ion-card-content>
+            <h3>Investigación Principal</h3>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="12" size-md="6" size-lg="4" *ngFor="let item of [1,2,3]; let i = index" class="ion-text-center">
+        <ion-card>
+          <img
+            src="https://www.zestmedical.com/files/img_cache/137/800_400_1_1485268204_ZestMedicalHomePageDoodle.png?1485511166" />
+          <ion-card-content>
+            <h3>Investigación Secundaria {{i+1}}</h3>
+          </ion-card-content>          
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-slides #mySlider pager="true" [options]="slideOpts" class="slide-onboarding">
+          <ion-slide *ngFor="let item of [1,2,3,4]">
+                          <img src="https://www.enlacejudio.com/wp-content/uploads/2017/07/shutterstock_418147048.jpg" />
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

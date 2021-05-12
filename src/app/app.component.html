@@ -1,0 +1,37 @@
+<ion-app>
+  <ion-split-pane contentId="main" when="false">
+    <ion-menu contentId="main" menuId="main" side="end" >
+      <ion-content>
+        <ion-list-header color="uncp">
+          <ion-label>
+            <h2>Parque Científico Uncp</h2>
+          </ion-label>
+        </ion-list-header>
+        <ion-list class="ion-no-padding">
+          <ion-menu-toggle autoHide="false" *ngFor="let p of menuOptions; let i = index">
+            <ion-item (click)="selectedIndex = i;" routerDirection="root"
+              [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
+              <ion-icon slot="start" [name]="p.icon"></ion-icon>
+              <ion-label>{{ p.title }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+      <ion-footer class="ion-no-border">
+        <ion-menu-toggle auto-hide="false" *ngIf="isLogged" (click)="logOut()">
+          <ion-item  lines="none" detail="false">
+            <ion-icon slot="start" name="log-out"></ion-icon>
+            <ion-label>Salir</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle auto-hide="false" *ngIf="!isLogged" (click)="logIn()">
+          <ion-item  lines="none" detail="false">
+            <ion-icon slot="start" name="log-in"></ion-icon>
+            <ion-label>Ingresar</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+    </ion-footer>
+    </ion-menu>
+    <ion-router-outlet id="main"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

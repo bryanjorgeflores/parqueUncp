@@ -1,0 +1,43 @@
+<app-header [hidden]="isModal"></app-header>
+<ion-content class="ion-no-padding ion-text-center box">
+ <ion-list-header color="uncp">
+      <ion-label>Ingresar</ion-label>
+    </ion-list-header>
+    <form [formGroup]="loginForm" (ngSubmit)="loginProvider()">
+      <ion-grid class="ion-justify-content-center">
+        <ion-row class="ion-no-padding">
+          <!-- <ion-col offset-lg="2"size-lg="4" size="0" class="ion-text-center">
+            <img src="https://www.esan.edu.pe/apuntes-empresariales/2018/06/07/1500x844_importancia_investigacion_mercado.jpg" alt="">
+          </ion-col> -->
+          <ion-col size="12" class="ion-text-center">
+            <ion-item lines="none">
+              <ion-label position="stacked" color="uncp">
+                <ion-icon slot="start" name="person-circle"></ion-icon>
+                Usuario
+              </ion-label>
+              <ion-input formControlName="usuario" type="text" placeholder="Ingrese su usuario"></ion-input>
+            </ion-item>
+            <ion-item lines="none">
+              <ion-label position="stacked" color="uncp">
+                <ion-icon slot="start" name="lock-open"></ion-icon>
+                Contraseña
+              </ion-label>
+              <ion-input formControlName="password" type="password" placeholder="Ingrese su contraseña"></ion-input>
+            </ion-item>
+            <ion-button [disabled]="!loginForm.valid" type="submit" expand="block" color="uncp">
+              Ingresar
+            </ion-button>
+            <br><br>
+            <ion-item button lines="none" class="ion-text-center" (click)="forgottenPassword()">
+              <ion-label color="uncp">
+                Olvidaste tu contraseña?
+              </ion-label>
+            </ion-item>
+          </ion-col>
+          
+  
+        </ion-row>
+      </ion-grid>
+    </form>
+
+</ion-content>

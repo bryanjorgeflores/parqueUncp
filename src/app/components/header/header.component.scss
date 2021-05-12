@@ -1,0 +1,27 @@
+@media screen and (min-width: 865px) {
+  ion-buttons.menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 865px) {
+  ion-grid.menu {
+    display: none;
+  }
+}
+
+ion-grid.menu {
+  background: var(--ion-color-uncp);
+
+  ion-col {
+    color: #fff;
+    cursor: pointer;
+    :hover{
+        color: var(--ion-color-medium-tint);
+    }
+  }
+}
+
+ion-grid.search {
+  background: var(--ion-color-uncp);
+}

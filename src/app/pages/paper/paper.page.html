@@ -1,0 +1,64 @@
+<app-header></app-header>
+<ion-content>
+  <ion-header class="bar-header">
+    <ion-toolbar color="uncp">
+      <ion-buttons slot="start">
+        <ion-button (click)="goBack()">
+          <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>Regresar</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col size="12" size-lg="9">
+        <ion-list-header color="uncp">
+          <ion-label>Titulo de la Investigación: </ion-label>
+        </ion-list-header>
+        <ion-list>
+          <ion-item lines="none">
+            <ion-label class="ion-text-wrap">
+              <ion-text color="uncp">
+                <h3>Descripción:</h3>
+              </ion-text>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipiscing elit purus, blandit euismod convallis posuere sem platea
+                himenaeos, curabitur dapibus quis commodo sagittis libero augue. Vulputate sapien at volutpat justo magna
+                orci, odio quisque pellentesque suscipit facilisis nisl, ullamcorper euismod hendrerit himenaeos montes.
+                Tristique risus class pulvinar molestie luctus porttitor sapien egestas fermentum convallis, dignissim
+                tincidunt placerat inceptos leo neque euismod at aptent, morbi accumsan mi curabitur vehicula pretium facilisi
+                phasellus diam.
+      
+                Penatibus volutpat tellus in nascetur mus pulvinar sapien, quisque nullam bibendum congue feugiat turpis,
+                molestie lacinia dapibus mi fermentum fusce. Diam in laoreet ultricies dictum donec semper sapien etiam ac,
+                vel vehicula platea magna congue quam purus vestibulum nunc, accumsan eget convallis imperdiet pulvinar eros
+                viverra tincidunt. Magnis tellus tempor mus proin habitant taciti et auctor, hac neque fames cubilia integer
+                pharetra consequat facilisi, eleifend phasellus etiam volutpat nascetur lacus metus.
+              
+              </p>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <iframe src="https://www.youtube.com/embed/aX3Rb0Lfjdg" width="100%" height="500" frameborder="0"></iframe>
+          </ion-item>
+          <ion-item>
+            <ion-slides #mySlider pager="true" [options]="slideOpts" class="slide-onboarding">
+              <ion-slide *ngFor="let item of [1,2,3,4]">
+                <ion-card>
+                  <img src="https://www.enlacejudio.com/wp-content/uploads/2017/07/shutterstock_418147048.jpg" />
+                  <ion-card-content>
+                    <ion-card-subtitle>Fecha 05/05/2021</ion-card-subtitle>
+                  </ion-card-content>
+                </ion-card>
+              </ion-slide>
+            </ion-slides>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+      <ion-col class="ion-text-center" size="12" size-lg="3" style="background-color: var(--ion-color-uncp);">
+        <img src="https://via.placeholder.com/300x1200/" alt="">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

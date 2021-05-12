@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="uncp">
+    <!-- <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons> -->
+    <ion-buttons slot="end" class="menu">
+      <ion-menu-button menu="main" when="lg"></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">
+      Parque Cientifico UNCP
+    </ion-title>
+  </ion-toolbar>
+  <ion-grid class="menu ion-text-center">
+    <ion-row class="ion-text-center">
+      <ion-col size="2" *ngFor="let item of menuOptions" (click)="goToPage(item.url)">
+        <ion-label>
+          <ion-icon slot="start" [name]="item.icon"></ion-icon>
+          {{item.title}}
+        </ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="search">
+    <ion-row>
+      <ion-col offset-lg="7" size-lg="4">
+        <ion-searchbar placeholder="Ingrese su búsqueda" (search)="goToSearch($event.target)"></ion-searchbar>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>

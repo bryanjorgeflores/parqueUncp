@@ -1,0 +1,27 @@
+ion-menu-toggle ion-item {
+    margin-top: 10px;
+    border-left: 5px solid rgba(255, 255, 255, 0);
+    ion-icon {
+        height: 20px;
+        width: 25px;
+        color: #A4A4A4;
+    }
+    ion-label {
+        font-weight: 500;
+    }
+}
+ion-menu ion-list-header{
+    height: 74px;
+}
+
+ion-menu ion-content {
+    --background: var(--ion-item-background, var(--ion-background-color, #fff));
+}
+
+ion-menu-toggle ion-item.selected {
+    --background: rgba(var(--ion-color-uncp-rgb), 0.14);
+    border-left: 5px solid var(--ion-color-uncp-shade);
+    ion-icon {
+        color: var(--ion-color-uncp);
+    }
+}
